@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xml>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<servlet>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<servlet-class>enrollment.RegistrationServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>DatabaseServlet</servlet-name>
+		<servlet-class>enrollment.DatabaseServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RegistrationServlet</servlet-name>
+		<url-pattern>/RegistrationServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DatabaseServlet</servlet-name>
+		<url-pattern>/DatabaseServlet</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>Welcomepage.jsp</welcome-file>
+	</welcome-file-list>
+	<display-name>Log4jWebDemo1</display-name>
+	<context-param>
+		<param-name>log4j-config-location</param-name>
+		<param-value>WEB-INF/Log.properties</param-value>
+	</context-param>
+	<context-param>
+		<param-name>database-config-location</param-name>
+		<param-value>WEB-INF/dbconfig.properties</param-value>
+	</context-param>
+</web-app>
+
